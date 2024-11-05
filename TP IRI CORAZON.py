@@ -1,6 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+
+
 # función para calcular frecuencia y periodo
 def frec_periodo(frecuencia):
     frec = frecuencia / 60 
@@ -23,6 +25,7 @@ def presion_diastolica(p_diastolica, frecuencia, tiempo=None):
     frec_ang = 2 * np.pi * frecuencia
     presion_dias = p_diastolica * np.maximum(0, np.sin(frec_ang * tiempo))
     return presion_dias
+
 # función para graficar 
 def graf_p(p_sistolica,p_diastolica,frecuencia):
     tiempo = np.linspace(0, 5, 1000)  # Genera 1000 puntos en el tiempo de 0 a 5 segundos
